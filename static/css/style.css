@@ -19,6 +19,7 @@ nav {
     padding: 3px 36px;
     border-radius: 60px;
     box-shadow: 5px 8px 16px #292424;
+    z-index: 99;
 }
 
 nav > ul {
@@ -42,6 +43,7 @@ nav a {
 nav > ul > li {
     display: inline-block;
     box-sizing: content-box;
+    user-select: none;
     color: white;
     height: 100%;
     text-align:center;
@@ -59,14 +61,56 @@ main {
 }
 
 .box {
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
     margin: 0px;
     background-color: aqua;
+    transition: background-image 1s ease-in-out;
+}
+#interes {
+    position: relative;
+    
+    z-index: 1;
 }
 
-.nav-li-checked {
+#interes section {
+    position: relative;
+    top: 110px;
+    z-index: 1;
+}
 
+#interes > #img-box {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url('/static/img/mario.jpg');
+    transition: background-image 1s ease-in-out;
+    filter: opacity(.9);
+}
+
+.box > section {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.box .sub-heading {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 50px;
+    color: yellow;
+    
+}
+
+#placehold {
+    text-decoration: underline;
 }
 
 #line {
@@ -74,7 +118,11 @@ main {
     top: 55px;
     position:absolute;
     left: var(--left);
-    transition: all  .8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: width  .6s ease-in-out,left .6s ease-in-out;
     width: var(--width);
     height: 2px;
+}
+
+details > summary::marker {
+    display: none;
 }
