@@ -81,9 +81,10 @@ function main() {
             },1000);
         });
     });
-    if (window.innerWidth < 500) {
-        alert('在大屏设备食用更佳!');
-    }
+    let m = new Modal('warning');
+    setTimeout(()=>{
+        m.toggle();
+    },1);
 }
 var onScroll = false;
 var lastScrollY = 0;

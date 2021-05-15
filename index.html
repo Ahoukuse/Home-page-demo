@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/modal.css">
+    <script src="/static/js/modal.js"></script>
     <script src="/static/js/index.js"></script>
     <script src="/static/js/work.js"></script>
     <title>Ahoukuse Home Page</title>
@@ -59,6 +61,17 @@
             <h2 >联系</h2>
         </div>
     </main>
-    
+    <div id="warning" class="modal">
+        <div class="title">
+            <h2>#注意事项</h2>
+        </div>
+        <div class="content">
+            <p>请在大屏设备上浏览,本页面可没有适配移动端哦</p>
+            <p>PS:本页面出现的图片来源自网络...</p>
+        </div>
+        <div class="action">
+            <button id="modal-close">关闭</button>
+        </div>
+    </div>
 </body>
 </html>
