@@ -1,21 +1,21 @@
 function work_main() {
-    document.querySelectorAll('.cart').forEach((ele)=>{
+    document.querySelectorAll('.card').forEach((ele)=>{
         let timer = -1;
 
         ele.addEventListener('mouseenter',(e)=>{
             if (timer != -1) {
                 clearTimeout(timer);
-                ele.classList.remove('cart-hover');
-                ele.classList.remove('cart-leave-hover');
+                ele.classList.remove('card-hover');
+                ele.classList.remove('card-leave-hover');
             }
-            ele.classList.add('cart-hover');
+            ele.classList.add('card-hover');
         });
         ele.addEventListener('mouseleave',(e)=>{
-            ele.classList.add('cart-leave-hover');
+            ele.classList.add('card-leave-hover');
             
             timer = setTimeout(()=>{
-                ele.classList.remove('cart-hover');
-                ele.classList.remove('cart-leave-hover');
+                ele.classList.remove('card-hover');
+                ele.classList.remove('card-leave-hover');
                 timer = -1;
             },700);
         });
