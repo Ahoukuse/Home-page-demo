@@ -67,7 +67,7 @@ main {
     margin: 0px;
     transition: background-image 1s ease-in-out;
 }
-#interes {
+#interests {
     position: relative;
     
     z-index: 1;
@@ -79,7 +79,7 @@ main {
     z-index: 1;
 }
 
-#interes > #img-box {
+#interests > #img-box {
     z-index: 0;
     content: '';
     position: absolute;
@@ -120,10 +120,6 @@ main {
     transition: width  .6s ease-in-out,left .6s ease-in-out;
     width: var(--width);
     height: 2px;
-}
-
-details > summary::marker {
-    display: none;
 }
 
 
@@ -205,7 +201,6 @@ details > summary::marker {
     background-color: #6200ee;
     bottom: 30px;
     transition: box-shadow .2s ease-in-out;
-
 }
 
 .card button:hover {

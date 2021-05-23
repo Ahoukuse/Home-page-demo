@@ -9,6 +9,7 @@
 .modal button {
     color: black;
     padding: 4px 18px;
+    padding-bottom: 6px;
     cursor: pointer;
     width: 72px;
     left: 20%;
