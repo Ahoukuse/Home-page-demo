@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/modal.css">
+    <link rel="stylesheet" href="static/css/rolling.css">
     <script src="static/js/modal.js"></script>
     <script src="static/js/work.js"></script>
     <script src="static/js/index.js"></script>
+    <script src="static/js/rolling.js"></script>
     <title>Ahoukuse Home Page</title>
 </head>
 <body>
@@ -16,7 +18,6 @@
         <ul>
             <li class="nav-li  nav-li-checked"><a href="#home">首页</a></li>
             <li class="nav-li"><a href="#aboutme">关于我</a></li>
-            <li class="nav-li"><a href="#interests">兴趣</a></li>
             <li class="nav-li"><a href="#work">作品</a></li>
             <li class="nav-li"><a href="#contract">联系</a></li>
             <div id="line"></div>
@@ -24,19 +25,32 @@
     </nav>
     <main>
         <div id="home" class="box">
+            <section>
+                <p>欢迎来到</p>
+                <p>一条咸鱼的主页</p>
+            </section>
         </div>
         <div id="aboutme" class="box">
-            <h2>关于我</h2>
-        </div>
-        <div id="interests" class="box">
-            <div id="img-box"></div>
             <section>
-                <h2 class="sub-heading"><span>喜欢</span><span id="placehold">.....</span></h2>
+                <p>Hi,我是XXX。比较自闭，算是个啊宅吧</p>
+                <div class="rolling">
+                    <span>喜欢</span> 
+                    <div class="mask">
+                        <span data-show-curr>游戏</span>
+                        <span>漫画</span>
+                        <span>编程</span>
+                    </div>
+                </div>
+                <p>最喜欢的游戏是《塞尔达传说》</p>
+                <p>一般就玩PC以及主机游戏。其实游戏我有些日子没碰了，前几个月发现自个竟然晕3D。</p>
+                <p>至于编程，于其说喜欢编程，更多的是喜欢通过编程获得的成就感吧</p>
+                <p>一天中只要不是特别忙就去LeetCode上写几道算法题。</p>
+                <p>最喜欢写C/C++的代码，偏爱强制类型的语言。但被C++的“特性”折磨是也会开始讨厌C++。</p>
             </section>
         </div>
         <div id="work" class="box">
             <section>
-                <h2 class="sub-heading">作品</h2>
+                <h2 class="sub-heading">练手作品</h2>
                 <div class="flex-box">
                     <div class="card">
                         <h3>Filter Demo</h3>
@@ -49,15 +63,53 @@
                         <button class="learn-more" href="#">了解更多</button>
                     </div>
                     <div class="card">
-                        <h3>card 1</h3>
-                        <p>SSSSS</p>
+                        <h3>滚动横幅</h3>
+                        <p>类似于街边广告的滚动横幅。</p>
                         <button class="learn-more" href="#">了解更多</button>
                     </div>
                 </div>
             </section>
         </div>
         <div id="contract" class="box">
-            <h2 >联系</h2>
+            <section>
+                <table class="personal-info">
+                    <tr>
+                        <td>电话</td>
+                        <td>18888888888</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>191003600107@st.sdju.edu.cn</td>
+                    </tr>
+                    <tr>
+                        <td>微博</td>
+                        <td>@XXXXX</td>
+                    </tr>
+                    <tr>
+                        <td>地址</td>
+                        <td>XXX, xx, x</td>
+                    </tr>
+                </table>
+                <h2>给我留言</h2>
+                <form action="#" method="POST">
+                    <table id="mesg-table">
+                        <tbody>
+                            <tr>
+                                <td><input type="text" name="name" id="name" placeholder="您的姓名"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" name="email" id="email" placeholder="您的邮箱"></td>
+                            </tr>
+                            <tr>
+                                <td><textarea name="message" id="message" cols="30" rows="10" placeholder="有什么想对我说的"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><input class="md-button" type="submit" value="提交"><input class="md-button" type="reset" value="重置"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </section>
         </div>
     </main>
     <div id="warning" class="modal">

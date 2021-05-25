@@ -1,0 +1,41 @@
+.mask {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 2em;
+    height: 1.2em;
+}
+.mask > span {
+    position: absolute;
+    top: 1.2em;
+}
+.mask > span[data-show-prev] {
+    transition: transform .6s ease-in-out;
+    transform: translateY(-2.4em);
+}
+.mask > span[data-show-curr] {
+    transition: transform .6s ease-in-out;
+    transform: translateY(-1.2em);
+}
+.mask > span {
+    position: absolute;
+}
+
+.mask > span:nth-child(1) {
+    color: #6b52c7;
+}
+.mask > span:nth-child(2) {
+    color: #f75d6e;
+}
+.mask > span:nth-child(3) {
+    color: #19dd8e;
+}
+
+.rolling {
+    font-size: 54px;
+    font-weight:bold;
+}
+.rolling > span:nth-child(1) {
+    vertical-align: top;
+    color: white;
+}
